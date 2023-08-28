@@ -1,0 +1,83 @@
+<style>
+    .section {
+        height: 100vh;
+    }
+
+    #brush,
+    #paint {
+        position: absolute;
+    }
+
+    #brush {
+        transform: rotate(180deg) translate(50%, 0);
+        z-index: 5;
+        left: 50%;
+        top: 50px;
+    }
+
+    #paint {
+        left: 50%;
+        transform: translate(-50%, 0);
+        top: 70px;
+        width: 50px;
+        height: 0px;
+        background-color: #31a5d380;
+    }
+</style>
+
+<div id="brush">
+    <img src="https://i.ibb.co/NngfTfJ/brush.png" width=80px />
+</div>
+<div id="paint"></div>
+
+<!--Adding sections to increase height of document-->
+<div class="section"></div>
+<div class="section"></div>
+<div class="section"></div>
+<div class="section"></div>
+<div class="section"></div>
+
+<!--Best viewed in full-page view, values need to be adjusted for different window heights-->
+
+<script>
+    //Move the brush and 'paint' with scroll
+    let brush = document.getElementById("brush"),
+        paint = document.getElementById("paint"),
+        height = document.body.scrollHeight;
+
+    window.addEventListener('scroll', function () {
+        var value = window.scrollY;
+        if (value <= height) {
+            //Multiply value by a factor that increases/decreases speed
+            brush.style.top = value * 1.18 + 50 + 'px';
+            paint.style.height = value * 1.18 + 'px';
+        }
+    });
+
+    //Flip the brush around based on scroll direction
+    let previousScrollPosition = 0;
+
+    const isScrollingDown = () => {
+        let goingDown = false;
+
+        let scrollPosition = window.pageYOffset;
+
+        if (scrollPosition > previousScrollPosition) {
+            goingDown = true;
+        }
+
+        previousScrollPosition = scrollPosition;
+
+        return goingDown;
+    };
+
+    const handleScroll = () => {
+        if (isScrollingDown() || window.scrollY == 0) {
+            brush.style.transform = 'rotate(180deg) translate(50%, 0)';
+        } else {
+            brush.style.transform = 'translate(-50%, -110px)';
+        }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+</script>
