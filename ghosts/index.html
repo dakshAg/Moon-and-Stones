@@ -1,38 +1,44 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="car.css">
+    <link rel="stylesheet" href="styles.css">
     <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="http://code.jquery.com/color/jquery.color-2.1.2.min.js"></script>
 </head>
 
-<body class="back-row-toggle splat-toggle">
-    <div id="weatherAnimation">
-        <div class="mansion-devil">
-            <img src="images/devil-transformed.png" width=400px></img>
-            <img src="images/mansion-transformed.png" width=400px></img>
-        </div>
-        <div class="title ">
-            <div class="rain front-row"></div>
+<body>
 
-            <div class="rain back-row"></div>
-            <div>
-                <span id="L">T</span>
-                <span id="I">H</span>
-                <span id="G">E</span>
-                <span id="H">_</span>
-                <span id="T">M</span>
-                <span id="L">A</span>
-                <span id="L">N</span>
-                <span id="L">S</span>
-                <span id="I">I</span>
-                <span id="L">O</span>
-                <span id="L">N</span>
-            </div>
+    <div class="title container">
+        <svg id="svg"></svg>
+        <div>
+            <span id="L">T</span>
+            <span id="I">H</span>
+            <span id="G">E</span>
+            <span id="H">_</span>
+            <span id="T">G</span>
+            <span id="L">H</span>
+            <span id="I">O</span>
+            <span id="L">S</span>
+            <span id="L">T</span>
+            <span id="L">S</span>
         </div>
     </div>
-    <div class="convo">
-        <p>Graveyard inside a mansion...</p>
-        <p>Whatever, I'll just steal the necklace and be out as soon as possible.</p>
+
+    <div class="wrapper">
+        <img class="bg-image main animated"
+            src="https://c4.wallpaperflare.com/wallpaper/12/122/458/girl-fiction-art-ghost-wallpaper-preview.jpg"
+            alt="">
+
+        <div class="drawing ui-corner-all animated">
+            <canvas id="draw-refract"></canvas>
+            <canvas id="draw-reflect"></canvas>
+            <canvas id="draw-fractures"></canvas>
+            <canvas id="draw-mainline"></canvas>
+            <canvas id="draw-noise"></canvas>
+            <canvas id="draw-debug" style="display: none;"></canvas>
+            <div id="draw-picker"></div>
+        </div>
+
     </div>
 
     <div class="quote">
@@ -44,9 +50,9 @@
             You
             <br>
             <br>
-            
-            <a class="future" href="ghosts.html">
-                Game Interface
+
+            <a class="future" href="car.html">
+                Phobias
             </a>
         </div>
 
@@ -81,8 +87,8 @@
     </div>
 
 
-    <script src="car.js"></script>
-    
+    <script src="flickering.js"></script>
+
 </body>
 
 </html>
