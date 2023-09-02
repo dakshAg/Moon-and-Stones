@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="inspect_painting.css">
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+</head>
+
+<body>
+    <img src="imp_painting_1.png" alt="" class="lamp">
+    <pre id="log"></pre>
+</body>
+<script>
+    var logger = document.getElementById('log');
+    log = function () {
+        for (var i = 0; i < arguments.length; i++) {
+            if (typeof arguments[i] == 'object') {
+                logger.innerHTML += (JSON && JSON.stringify ? JSON.stringify(arguments[i], undefined, 2) : arguments[i]) + '<br />';
+            } else {
+                logger.innerHTML += arguments[i] + '<br />';
+            }
+        }
+    }
+
+    log("Sanity -1");
+    log("Knowledge +1");
+    log("Insight +1");
+    log("Ghost of the lady will haunt you...soon");
+</script>
+
+</html>

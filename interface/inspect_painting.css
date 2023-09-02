@@ -1,0 +1,22 @@
+@import url(https://fonts.googleapis.com/css?family=Special+Elite);
+
+body {
+	background: #000;
+	font-family: 'Special Elite', cursive;
+	display: flex;
+	justify-content: center;
+}
+
+.lamp {
+	position: absolute;
+	height: 70vh;
+	align-self: center;
+	justify-self: center;
+}
+
+#log {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	color: #fff;
+}

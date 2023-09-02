@@ -1,0 +1,32 @@
+body {
+    background: url("images/wall.jpeg");
+    margin: 0;
+    overflow: hidden;
+}
+
+#info {
+    color: white;
+    font-family: monospace;
+}
+
+canvas {
+    position: absolute;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+}
+
+img {
+    position: absolute;
+    cursor: pointer;
+}
+
+#container {
+    position: absolute;
+    width: 485px;
+    height: 768px;
+    left: 200;
+    
+    top: 200;
+}

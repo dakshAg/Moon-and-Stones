@@ -25,7 +25,7 @@
     opacity: 0.7;
 }
 
-.glory{
+.glory {
     font-family: 'Kirang Haerang', cursive;
     color: #6C3483;
     animation: glow 1s ease-in-out infinite alternate;
@@ -33,12 +33,13 @@
 
 @-webkit-keyframes glow {
     from {
-      text-shadow: 0 0 10px #000, 0 0 20px #000, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+        text-shadow: 0 0 10px #000, 0 0 20px #000, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
     }
+
     to {
-      text-shadow: 0 0 20px #000, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+        text-shadow: 0 0 20px #000, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
     }
-  }
+}
 
 .glitch:hover:before {
     animation: animate .5s infinite;
@@ -516,43 +517,81 @@ p {
 }
 
 .future {
-	&::after,
-	&::before {
-		content: "";
-		position: absolute;
-		border: 2px solid white;
-		width: calc(100% + 15px);
-		height: 60px;
-		transition: 0.5s ease;
-	}
 
-	&::after {
-		top: -15px;
-		left: -15px;
-		border-right: none;
-		border-bottom: none;
-	}
+    &::after,
+    &::before {
+        content: "";
+        position: absolute;
+        border: 2px solid white;
+        width: calc(100% + 15px);
+        height: 60px;
+        transition: 0.5s ease;
+    }
 
-	&::before {
-		bottom: -15px;
-		right: -15px;
-		border-left: none;
-		border-top: none;
-	}
+    &::after {
+        top: -15px;
+        left: -15px;
+        border-right: none;
+        border-bottom: none;
+    }
 
-	&:hover:after,
-	&:hover:before {
-		width: calc(100% - 30px);
-		height: 80px;
-	}
+    &::before {
+        bottom: -15px;
+        right: -15px;
+        border-left: none;
+        border-top: none;
+    }
+
+    &:hover:after,
+    &:hover:before {
+        width: calc(100% - 30px);
+        height: 80px;
+    }
 }
+
 a {
-	padding: 1rem 2rem;
-	font-size: 1.25rem;
-	position: relative;
-	border: 2px solid white;
-	color: white;
-	background-color: transparent;
-	text-align: center;
+    padding: 1rem 2rem;
+    font-size: 1.25rem;
+    position: relative;
+    border: 2px solid white;
+    color: white;
+    background-color: transparent;
+    text-align: center;
 }
 
+.trans_ghost {
+    height: 600px;
+    position: absolute;
+    left: 30;
+}
+
+.trans_ghost img {
+    height: 600px;
+    opacity: 0.1;
+
+}
+
+.fade-in {
+    -webkit-animation: fade-in 10.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+            animation: fade-in 10.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+ @-webkit-keyframes fade-in {
+  0% {
+    
+    opacity: 0;
+  }
+  100% {
+    
+    opacity: 0.4;
+  }
+}
+@keyframes fade-in {
+  0% {
+    
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.4;
+  }
+}

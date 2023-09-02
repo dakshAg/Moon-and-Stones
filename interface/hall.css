@@ -1,0 +1,31 @@
+@font-face {
+    font-family: 'bloody'; /*a name to be used later*/
+    src: url('ghastly_panic/Ghastly\ Panic.ttf'); /*URL to font*/
+}
+
+html,
+body {
+    margin: 0;
+}
+
+canvas {
+    display: block;
+    z-index: 20;
+}
+
+.ghosts{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ghosts img{
+    height: 80vh;
+    z-index: 5;
+}
+.ghosts h1{
+    z-index: 5;
+    font-size: 70px;
+    color: #ff3d00;
+    font-family: bloody;
+}
