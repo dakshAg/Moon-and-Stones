@@ -559,13 +559,13 @@ a {
     text-align: center;
 }
 
-.trans_ghost {
+.ghosty {
     height: 600px;
     position: absolute;
     left: 30;
 }
 
-.trans_ghost img {
+.ghosty img {
     height: 600px;
     opacity: 0.1;
 
