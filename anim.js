@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function (event) {
     document.addEventListener("scroll", function (event) {
-        const animatedBoxes = document.getElementsByClassName("trans_ghost");
+        const animatedBoxes = document.getElementsByClassName("ghosty");
         const windowOffsetTop = window.innerHeight + window.scrollY;
 
         Array.prototype.forEach.call(animatedBoxes, (animatedBox) => {
