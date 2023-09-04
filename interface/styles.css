@@ -2,6 +2,9 @@
   padding: 0;
   margin: 0;
 }
+body{
+  
+}
 
 /* Flashlight Overlay */
 :root {
@@ -27,8 +30,10 @@
   background-image: url('wall.png');
   height: 100vh;
   width: 100vw;
-  display: grid;
-  justify-content: space-between;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  justify-content: center;
 }
 
 .shadowfilter {
@@ -42,17 +47,19 @@
 
 .snake{
   height: 40vh;
-  grid-row-start: 1;
-  grid-row-start: 3;
-  grid-row-end: 3;
+ align-self: flex-start;
+ justify-self: flex-start;
 }
 .lamp{
   height: 20vh;
-  grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: 2;
+  z-index: 30;
+  position: absolute;
 }
-
+.ghost_of_the_wall{
+  height: 20vh;
+  z-index: 20;
+  position: absolute;
+}
 .painting{
   height: 20vh;
   grid-column-start: 3;
@@ -66,8 +73,18 @@
   grid-row-start: 3;
 }
 .character{
-  z-index: 30;
-  height: 60vh;
+  z-index: 0;
+  height: 40vh;
+  position: absolute;
+  bottom: 0;
+  margin: auto;
+  left: 0;
+  right: 0;
+  transform-origin: center;
+}
+.hints{
+  z-index: 20;
+  height: 100vh;
   position: absolute;
   bottom: 0;
   margin: auto;

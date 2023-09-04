@@ -6,7 +6,7 @@
 </head>
 
 <body>
-    <img src="imp_painting_1.png" alt="" class="lamp">
+    <img src="wall_ghost_2.png" alt="" class="lamp">
     <pre id="log"></pre>
 </body>
 <script>
@@ -25,6 +25,14 @@
     log("Knowledge +1");
     log("Insight +1");
     log("Ghost of the lady will haunt you...soon");
+
+    const delay = ms => new Promise(res => setTimeout(res, ms));
+    const redirectAfterWait = async () => {
+        await delay(6000);
+        console.log("Waited 6s");
+        window.location.href = "hall.html";
+    };
+    redirectAfterWait();
 </script>
 
 </html>

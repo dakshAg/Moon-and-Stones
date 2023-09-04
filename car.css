@@ -596,8 +596,10 @@ body.single-toggle .drop:nth-child(10) {
 
 .quote {
     line-height: 100vh;
-    background: #111;
+    background-image: url("images/shaky_ghost.gif");
+    background-size: contain;
     color: #fff;
+    background-repeat:no-repeat;
 }
 
 .test {

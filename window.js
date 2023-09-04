@@ -6,8 +6,8 @@ var images = [],
     imageIndex = 0;
 
 var image,
-    imageWidth = 768,
-    imageHeight = 485;
+    imageWidth = 300,
+    imageHeight = 477;
 
 var vertices = [],
     indices = [],
@@ -22,7 +22,7 @@ window.onload = function() {
 
     // images from reddit/r/wallpapers
     var urls = [
-            'images/window.jpeg'
+            'images/window.png'
         ],
         image,
         loaded = 0;
@@ -52,7 +52,7 @@ function placeImage(transitionIn) {
     container.appendChild(image);
 
     if (transitionIn !== false) {
-        gsap.fromTo(image,{y:0}, {y:0, ease:Back.easeOut,duration: 0.75})
+        gsap.fromTo(image,{y:100}, {y:100, ease:Back.easeOut,duration: 0.75})
         //TweenMax.fromTo(image, );
     }
 }
@@ -155,7 +155,7 @@ function shatterCompleteHandler() {
     vertices.length = 0;
     indices.length = 0;
 
-    window.location.replace("interface/interface.html");
+    window.location.href = "interface/interface.html";
 
     //placeImage();
 }
