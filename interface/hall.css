@@ -22,10 +22,20 @@ canvas {
 .ghosts img{
     height: 80vh;
     z-index: 5;
+    margin-top: 100px;
+    margin-left: 100px;
 }
-.ghosts h1{
+.ghosts h4{
     z-index: 5;
     font-size: 70px;
     color: #ff3d00;
+    margin-left: 100px;
+    font-family: bloody;
+}
+.ghosts h3{
+    z-index: 5;
+    font-size: 70px;
+    color: white;
+    margin-left: 100px;
     font-family: bloody;
 }

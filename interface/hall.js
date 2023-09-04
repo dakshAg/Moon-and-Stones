@@ -45,6 +45,13 @@ function drawLine() {
 
   if (!atLeastOneOnScreen) {
     //reset();
+    const delay = ms => new Promise(res => setTimeout(res, ms));
+    const redirectAfterWait = async () => {
+      await delay(2000);
+      console.log("Waited 2s");
+      window.location.href = "end.html";
+    };
+    redirectAfterWait();
   }
 }
 
