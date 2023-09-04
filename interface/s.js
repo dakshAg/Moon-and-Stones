@@ -115,3 +115,7 @@ const redirectAfterWait = async () => {
   console.log("Waited 6s");
   window.location.href = "inspect_painting_1.html";
 };
+document.body.addEventListener("mousemove", function () {
+  var audio = new Audio('audio/home_music.mp3');
+  audio.play();
+})

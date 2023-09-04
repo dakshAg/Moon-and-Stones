@@ -19,3 +19,8 @@ function addClass(element, className) {
         element.className += " " + className;
     }
 }
+
+document.body.addEventListener("mousemove", function () {
+    var audio = new Audio('audio/start_music.mp3');
+    audio.play();
+})

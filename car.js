@@ -175,3 +175,8 @@ $('.single-toggle.toggle').on('click', function () {
 
 makeItRain();
 
+document.body.addEventListener("mousemove", function () {
+    var audio = new Audio('audio/thunder.mp3');
+    audio.play();
+})
+
