@@ -102,6 +102,8 @@ function dragElement(elmnt) {
     document.onmouseup = null;
     document.onmousemove = null;
 
+    var audio = new Audio('scream.mp3');
+    audio.play();
 
     redirectAfterWait();
   }
@@ -109,7 +111,7 @@ function dragElement(elmnt) {
 
 const delay = ms => new Promise(res => setTimeout(res, ms));
 const redirectAfterWait = async () => {
-  await delay(2000);
-  console.log("Waited 2s");
+  await delay(6000);
+  console.log("Waited 6s");
   window.location.href = "inspect_painting_1.html";
 };
