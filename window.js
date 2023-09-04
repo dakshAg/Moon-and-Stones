@@ -155,7 +155,7 @@ function shatterCompleteHandler() {
     vertices.length = 0;
     indices.length = 0;
 
-    window.location.href = "interface/interface.html";
+    window.location.href = "interface/interface1.html";
 
     //placeImage();
 }
